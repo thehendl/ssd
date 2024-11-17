@@ -1,0 +1,23 @@
+<!ELEMENT cinemas (postaldata, cinema+)> <!--postaldata, one or more cinema-->
+        <!ELEMENT postaldata (postal+)> <!--one or more postal-->
+
+        <!ELEMENT postal (#PCDATA)> <!--text-->
+        <!ATTLIST postal id ID #REQUIRED> <!--PLZ id requiered-->
+
+        <!ELEMENT cinema (location, postalID, cinemaname+, movies*)> <!--one or more cinemanames, zero or more movies-->
+        <!ATTLIST cinema location #REQUIRED> <!--location required-->
+        <!ATTLIST cinema postalID IDREF #REQUIRED> <!--IDref postalID required-->
+
+        <!ELEMENT cinemaname (#PCDATA)>  <!--text in cinemaname-->
+
+        <!ELEMENT movies (title? )> <!--zero or one title-->
+
+
+        <!ELEMENT title (#PCDATA, year?, origin?)> <!--text, zero or one year and origin-->
+        <!ATTLIST title id ID
+                ref IDREF #IMPLIED> <!--title id  #ID and #IDREF #IMPLIED-->
+
+        <!ELEMENT year (#PCDATA)> <!--text in year-->
+
+        <!ELEMENT origin (#PCDATA)> <!--text in origin-->
+

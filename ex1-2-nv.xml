@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ex1dtd SYSTEM "ex1.dtd">
+
+<cinemas>
+    <!-- Postal data with unique IDs -->
+    <postaldatas> <!-- postaldatas isnt an existing element-->
+        <postal ip="post3"> <!-- id is required-->
+            1030
+        </postal>
+        <postal id="post9">
+            1090
+        </postal>
+    </postaldatas>
+
+    <cinema  postalID="post3">
+        <cinemaname>art house cinema</cinemaname>
+        <cinemaname>landstraße kinoplex</cinemaname>
+        <movies>
+            <title id="tit7">
+                a space odyssey
+                <year>1968</year>
+                <origin country= "US"> </origin> <!-- attribute instead of pcdata in origin-->
+            </title>
+            <title id="tit8">
+                la dolce vita
+                <origin>IT</origin>
+            </title>
+        </movies>
+    </cinema>
+
+    <cinema location="alsergrund" postalID="post9">
+        <cinemaname>retro theater</cinemaname>
+        <movies>
+            <title id="tit9">
+                bicycle thieves
+                <year>1948</year>
+                <origin>IT</origin>
+            </title>
+            <title ref="tit7">
+            </title>
+        </movies>
+    </cinema>
+
+    <cinema location="neubau" postalID="post9">
+        <cinemaname>indie film club</cinemaname>
+    </cinema>
+</cinemas>

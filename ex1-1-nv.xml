@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ex1dtd SYSTEM "ex1.dtd">
+
+<cinemas>
+    <!-- Postal data with different postal IDs -->
+    <postaldata>
+        <postal id="post2">
+            1020
+        </postal>
+        <postal id="post20">
+            1200
+        </postal>
+    </postaldata>
+
+    <cinemas location="leopoldstadt" postalID="post2"> <!--no validation because missspelling cinema and breaking cinemas rules-->
+        <cinemaname>kino leopold</cinemaname>
+        <movies>
+            <title id="tit4">
+                sunset boulevard
+                <year>1950</year>
+                <origin>US</origin>
+            </title>
+            <title id="tit5">
+                metropolis
+                <year>1927</year>
+                <origin>DE</origin>
+            </title>
+        </movies>
+    </cinemas>
+
+    <cinema location="brigittenau" postalID="post20">
+        <cinemaname>brigittenauer kino</cinemaname>
+        <movies>
+            <title id="tit6">
+                the cabinet of dr. caligari
+                <year>1920</year>
+                <origin>DE</origin>
+            </title>
+            <title ref="tit4">
+                <!-- References the movie with id="tit4" -->
+            </title>
+        </movies>
+    </cinema>
+
+</cinemas>

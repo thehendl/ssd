@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ex1dtd SYSTEM "ex1.dtd">
+
+<cinemas>
+    <postaldata>
+        <postal id="post7">1070</postal>
+        <postal id="post10">1100</postal>
+    </postaldata>
+
+    <cinema location="neubau" postalID="post7">
+        <cinemaname>neubau cinema center</cinemaname>
+        <movies>
+            <title id="tit10">
+                the grand budapest hotel
+                <year>2014</year>
+                <origin>US</origin>
+            </title>
+        </movies>
+    </cinema>
+
+    <cinema location="favoriten" postalID="post10">
+        <cinemaname>favoriten multiplex</cinemaname>
+        <movies>
+            <title id="tit11">
+                spirited away
+                <year>2001</year>
+                <year>2002</year> <!-- more than one year................. -->
+                <origin>JAP</origin>
+            </title>
+
+        </movies>
+    </cinema>
+
+
+</cinemas>
