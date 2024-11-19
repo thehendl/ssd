@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ex2xsd SYSTEM "ex2.xsd">
+
+
+<cinemas>
+    <postaldata>
+        <postal id="post100">1000</postal>
+        <postal id="post200">2000</postal>
+        <postal id="post300">3000</postal>
+    </postaldata>
+
+    <cinema postalID="post100">
+        <cinemaname>Cinema Paradiso</cinemaname>
+        <movies>
+            <title id="tit001">
+                <year>1995</year>
+                <origin>US</origin>
+            </title>
+            <title id="tit002">
+                <year>2020</year>
+                <origin>GB</origin>
+            </title>
+        </movies>
+    </cinema>
+
+    <cinema postalID="post200" location="Downtown">
+        <cinemaname>Grand Theater</cinemaname>
+        <movies>
+            <title id="tit003">
+                <year>1939</year>
+                <origin>US</origin>
+            </title>
+        </movies>
+    </cinema>
+
+    <cinema postalID="post300">
+        <!-- location defaults to 'not given' -->
+        <cinemaname>Classic Film House</cinemaname>
+        <movies>
+            <title id="tit004">
+                <year>1927</year>
+                <origin>DE</origin>
+            </title>
+            <title id="tit005">
+                <year>1955</year>
+                <origin>GB</origin>
+            </title>
+        </movies>
+    </cinema>
+</cinemas>

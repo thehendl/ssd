@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ex2xsd SYSTEM "ex2.xsd">
+
+<cinemas>
+    <postaldata>
+        <postal id="post2">
+            1020
+        </postal>
+        <postal id="post20">
+            <!-- number to high for numeric restriction-->
+            <!--1200-->
+            12000
+        </postal>
+    </postaldata>
+    <!--postal id required-->
+    <!-- <cinema location="leopoldstadt" postalID="post2"> -->
+    <cinema location="leopoldstadt">
+        <cinemaname>kino leopold</cinemaname>
+        <movies>
+            <title id="tit4">
+                sunset boulevard
+                <year>1950</year>
+                <origin>US</origin>
+            </title>
+            <title id="tit5">
+                metropolis
+                <year>1927</year>
+                <origin>DE</origin>
+            </title>
+        </movies>
+    </cinema>
+
+    <cinema location="brigittenau" postalID="post20">
+        <cinemaname>brigittenauer kino</cinemaname>
+        <movies>
+            <title id="tit6">
+                the cabinet of dr. caligari
+                <year>1920</year>
+                <origin>DE</origin>
+            </title>
+
+
+        </movies>
+    </cinema>
+
+</cinemas>

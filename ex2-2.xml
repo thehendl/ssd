@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ex2xsd SYSTEM "ex2.xsd">
+
+<cinemas>
+    <postaldata>
+        <postal id="post1">1010</postal>
+        <postal id="post2">1020</postal>
+    </postaldata>
+    <cinema postalID="post1">
+        <cinemaname>Burg Kino</cinemaname>
+        <movies>
+            <title id="tit1">
+                Dr. Mick
+                <year>1949</year>
+                <origin>GB</origin>
+            </title>
+        </movies>
+    </cinema>
+</cinemas>
