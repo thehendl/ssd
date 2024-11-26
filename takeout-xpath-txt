@@ -1,0 +1,82 @@
+Q1: Retrieve the identifiers (the values of the id attribute) of all staff members working at
+    the restaurant.
+
+    XPATH: //personnel/person/@id
+    RESULT:P1
+           P2
+           P3
+           P4
+
+    selects all id attritbutes of person elements of pesonell element
+
+
+Q2: Retrieve the names (the values of the name attribute) of all vegetarian dishes.
+
+    XPATH://offered-dishes/dish[@vegetarian="true"]/@name
+    RESULT:pizza margherita
+           veggieburger
+           pasta
+           salad
+
+    selects all name attributes of dish elements of offered-dishes elements where vegetarian attribute is true
+
+
+Q3: Count the number of item elements in the 2nd order of the restaurant (i.e., in the second
+    order element that appears as content of the current-orders element).
+
+    XPATH:count(//current-orders/order[2]/item)
+    RESULT:2
+
+    using indexing, order[2], to count items in second order element
+
+
+Q4: Retrieve client names (the values of the client-name attribute) of customers who
+    have more than 2 items in their order.
+
+    XPATH://current-orders/order[self-pickup and count(item) > 2]/self-pickup/@client-name
+    RESULT:michael berger
+
+    selects order elements in current order element which have a self-pickup child and more than 2 items,
+    then results the client-name attribute in selfpickup element
+
+
+Q5: Retrieve the names of staff members who are currently assigned to deliver some order
+
+    XPATH://personnel/person[@id = //current-orders/order/address/@deliveredBy]/name
+    RESULT:franz gross
+           julia klein
+
+    cross-refs the delieveredBy atrribute of adress element with id attribute of person elements in personnel element,
+    then results the name of the persons
+
+
+Q6: Retrieve the identifiers of orders whose total price is more than 20. Specifically, the total
+    price of an order is the sum of item prices over all items in the order.
+
+    XPATH://current-orders/order[@total-price > 20]/@order-id
+    RESULT:O1
+           O2
+           O3
+           O4
+
+    i added total-price in the dtd, so it selects order elements where the total-price attribute is > 20 and results
+    the order-id attribute.
+
+
+Q7: Invent additional two queries of your choice. (Try to use XPath features that are challenging to you, not the ones
+    that are easy.)
+
+    .1
+    XPATH://offered-dishes/dish[@id = //current-orders/order[address/@deliveredBy="P1"]/item/@dish]/@name
+    RESULT:pizza margherita
+           veggieburger
+
+    cross-refs the dish elements attribute id with the dish id attributes which are delieverd by P1 and
+    results dish name attribute
+
+    .2
+    XPATH:count(//current-orders/order/item[@dish = //offered-dishes/dish[@vegetarian="true"]/@id])
+    RESULT:6
+
+    cross-refs id atribute of dish attribute of current-orders with id attributes of veggie = true dishes in offered dishes
+    and counts veggie ddishes currently in order
