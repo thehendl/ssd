@@ -1,0 +1,44 @@
+Q1: select all titles played in cinemas in leopoldstadt which are shot after 1940
+
+    XPATH://cinema[@location='leopoldstadt']//title[year > 1940]
+    RESULT:sunset boulevard 1950 US
+
+    selects title elements with year attribute > 1940 in cinema element with location attribute = leopoldstadt
+    results full title element with name year and origin
+
+
+Q2: select all cinemas which play german origin titles
+
+    XPATH://cinema[movies/title/origin='DE']/cinemaname
+    RESULT:kino leopold
+           brigittenauer kino
+
+    results the cinemaname attribute in cinema elements where title elements with origin elements = DE are
+
+
+Q3: check for existing cinemas from postal ids given in the xml an result their names
+
+    XPATH://cinema[@postalID = //postal/@id]/cinemaname/text()
+    RESULT:kino leopold
+           brigittenauer kino
+
+    crossref cinema postalID attributes with postal elements id attribut and result text in tilte element
+
+
+Q4: result title and id of the first movie in each cinema
+
+    XPATH://cinema/movies/title[1]/@id | //cinema/movies/title[1]/text()
+    RESULT:tit4
+           sunset boulevard
+           tit6
+           the cabinet of dr. caligari
+
+    line 1: result it attribute of title element with index 1 of movies element of cinema element
+    line 2: result text (movie name) of title element with index 1 of movies element of cinema element
+
+Q5: name cinemas playing more than 1 title
+
+    XPATH://cinema[count(movies/title) > 1]/cinemaname
+    RESULT:kino leopold
+
+    results cinemaname element of cinema element if count of title element of movie element of cinema element > 1
