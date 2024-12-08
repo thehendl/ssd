@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<library>
+    <inventory>
+        <book id="1">
+            <quantity>10</quantity>
+            <location>A1</location>
+            <condition>New</condition>
+            <shelf>1A</shelf>
+            <available>true</available>
+        </book>
+        <book id="2">
+            <quantity>5</quantity>
+            <location>B2</location>
+            <condition>Used</condition>
+            <shelf>2B</shelf>
+            <available>false</available>
+        </book>
+        <book id="3">
+            <quantity>12</quantity>
+            <location>C3</location>
+            <condition>New</condition>
+            <shelf>3C</shelf>
+            <available>true</available>
+        </book>
+        <book id="4">
+            <quantity>3</quantity>
+            <location>D4</location>
+            <condition>Damaged</condition>
+            <shelf>4D</shelf>
+            <available>false</available>
+        </book>
+        <book id="5">
+            <quantity>8</quantity>
+            <location>E5</location>
+            <condition>New</condition>
+            <shelf>5E</shelf>
+            <available>true</available>
+        </book>
+    </inventory>
+</library>

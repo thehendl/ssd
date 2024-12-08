@@ -1,0 +1,84 @@
+<catalog>
+    <library>
+        <book_1>
+            <title>
+                <title>The Great Gatsby</title>
+            </title>
+            <author>
+                <author>F. Scott Fitzgerald</author>
+            </author>
+            <price currency="USD">
+                <price currency="USD">10.99</price>
+            </price>
+            <quantity>5</quantity>
+            <condition>Used
+            </condition>
+            <location>Location_1</location>
+            <available>true</available>
+        </book_1>
+        <book_2>
+            <title>
+                <title>1984</title>
+            </title>
+            <author>
+                <author>George Orwell</author>
+            </author>
+            <price currency="USD">
+                <price currency="GBP">8.99</price>
+            </price>
+            <quantity>10</quantity>
+            <condition>New</condition>
+            <location>Location_2</location>
+            <available>false</available>
+        </book_2>
+        <book_3>
+            <title>
+                <title>To Kill a Mockingbird</title>
+            </title>
+            <author>
+                <author>Harper Lee</author>
+            </author>
+            <price currency="USD">
+                <price currency="USD">7.99</price>
+            </price>
+            <quantity>10</quantity>
+            <condition>New</condition>
+            <location>Location_3</location>
+            <available>false</available>
+        </book_3>
+        <book_4>
+            <title>
+                <title>Brave New World</title>
+            </title
+            >
+            <author>
+                <author>Aldous Huxley</author>
+            </author>
+            <price currency="USD">
+                <price currency="USD">9.99</price>
+            </price>
+            <quantity>10</quantity>
+            <condition>New</condition>
+            <location>Location_4</location>
+            <available>false</available>
+        </book_4
+        >
+        <book_5>
+            <title>
+                <title>Fahrenheit 451</title>
+            </title>
+            <author>
+                <author>Ray Bradbury</author>
+            </author>
+            <price currency="USD">
+                <price currency="USD">12.99</price>
+            </price>
+            <quantity>5</quantity>
+            <condition>Used</condition>
+            <location>Location_5</location>
+            <available>true</available>
+        </book_5>
+    </library>
+</catalog>
+        <!--i didnt manage to get off the nested elements
+        as well i dont get why root is missing //Valid XML document must have a root tag-->
