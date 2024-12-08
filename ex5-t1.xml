@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cinemas>
+    <postaldata>
+        <postal id="post1">
+            1010
+        </postal>
+        <postal id="post5">
+            1050
+        </postal>
+    </postaldata>
+    <cinema location="innere stadt" postalID="post1">
+        <cinemaname>
+            burgkino
+        </cinemaname>
+        <movies>
+            <title id="tit1">
+                the third man
+                <year>
+                    1949
+                </year>
+                <origin>
+                    GB
+                </origin>
+            </title>
+            <title id="tit2">
+                favoriten
+                <year>
+                    2024
+                </year>
+                <origin>
+                    AT
+                </origin>
+            </title>
+
+        </movies>
+    </cinema>
+
+    <cinema location="margarethen" postalID="1050">
+        <cinemaname>
+            filmmcasino
+        </cinemaname>
+        <movies>
+            <title id="tit3">
+                der junge &amp; der reiher
+                <year>
+                    2024
+                </year>
+                <origin>
+                    JAP
+                </origin>
+            </title>
+        </movies>
+    </cinema>
+
+</cinemas>
