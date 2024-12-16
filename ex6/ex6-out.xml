@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<statistics>
+<cinemaStats>
     <cinemaCount>2</cinemaCount>
     <movieCount>3</movieCount>
-    <postalCodeCount>2</postalCodeCount>
-</statistics>
+    <averageMpC>1.0</averageMpC>
+    <averagePostalCode>1030.0</averagePostalCode>
+    <titleIds>
+        <id>tit1</id>
+        <id>tit2</id>
+        <id>tit3</id>
+    </titleIds>
+</cinemaStats>
