@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE takeout SYSTEM "takeout.dtd">
+<takeout>
+    <!-- dishes -->
+    <offered-dishes>
+        <dish id="D1" name="pizza margherita" vegetarian="true"/>
+        <dish id="D2" name="pizza pepperoni" vegetarian="false"/>
+        <dish id="D3" name="veggieburger" vegetarian="true"/>
+        <dish id="D4" name="cheeseburger" vegetarian="false"/>
+        <dish id="D5" name="pasta" vegetarian="true"/>
+        <dish id="D6" name="steak" vegetarian="false"/>
+        <dish id="D7" name="salad" vegetarian="true"/>
+        <dish id="D8" name="fish" vegetarian="false"/>
+    </offered-dishes>
+
+    <!-- personnel -->
+    <personnel>
+        <person id="P1">
+            <name>franz gross</name>
+            <transport>car</transport>
+        </person>
+        <person id="P2">
+            <name>julia klein</name>
+            <transport>bike</transport>
+        </person>
+        <person id="P3">
+            <name>lisa ertl</name>
+            <transport>motorbike</transport>
+        </person>
+        <person id="P4">
+            <name>heidi bauer</name>
+        </person>
+    </personnel>
+
+    <!-- current orders -->
+    <current-orders>
+        <!-- order 1 -->
+        <order order-id="O1">
+            <address deliveredBy="P1">paniglgasse 15, 1040</address>
+            <item dish="D1" price="12.99"/>
+            <item dish="D3" price="9.49"/>
+        </order>
+        <!-- order 2 -->
+        <order order-id="O2">
+            <self-pickup client-name="alex mueller"/>
+            <item dish="D2" price="15.49"/>
+            <item dish="D4" price="8.99"/>
+        </order>
+        <!-- order 3 -->
+        <order order-id="O3">
+            <address deliveredBy="P2">franzgasse 12, 1020</address>
+            <item dish="D5" price="13.99"/>
+            <item dish="D6" price="22.49"/>
+            <item dish="D3" price="9.49"/>
+        </order>
+        <!-- order 4 -->
+        <order order-id="O4">
+            <self-pickup client-name="michael berger"/>
+            <item dish="D7" price="7.99"/>
+            <item dish="D1" price="12.99"/>
+            <item dish="D6" price="22.49"/>
+        </order>
+
+    </current-orders>
+</takeout>
