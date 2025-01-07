@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<catalog>
+    <library>
+        <name>City Library</name>
+        <address>
+            <street>Main Street 123</street>
+            <city>New York</city>
+            <state>NY</state>
+            <zip>10001</zip>
+        </address>
+        <books>
+            <book id="1">
+                <title>The Great Gatsby</title>
+                <author>F. Scott Fitzgerald</author>
+                <publisher>Scribner</publisher>
+                <price currency="USD">10.99</price>
+                <publication_date>1925-04-10</publication_date>
+                <genre>Fiction</genre>
+                <pages>180</pages>
+                <language>English</language>
+                <rating>4.5</rating>
+            </book>
+            <book id="2">
+                <title>1984</title>
+                <author>George Orwell</author>
+                <publisher>Secker and Warburg</publisher>
+                <price currency="GBP">8.99</price>
+                <publication_date>1949-06-08</publication_date>
+                <genre>Dystopian</genre>
+                <pages>328</pages>
+                <language>English</language>
+                <rating>4.7</rating>
+            </book>
+            <book id="3">
+                <title>To Kill a Mockingbird</title>
+                <author>Harper Lee</author>
+                <publisher>J.B. Lippincott and Co.</publisher>
+                <price currency="USD">7.99</price>
+                <publication_date>1960-07-11</publication_date>
+                <genre>Fiction</genre>
+                <pages>281</pages>
+                <language>English</language>
+                <rating>4.8</rating>
+            </book>
+            <book id="4">
+                <title>Brave New World</title>
+                <author>Aldous Huxley</author>
+                <publisher>Chatto and Windus</publisher>
+                <price currency="USD">9.99</price>
+                <publication_date>1932-08-18</publication_date>
+                <genre>Science Fiction</genre>
+                <pages>311</pages>
+                <language>English</language>
+                <rating>4.3</rating>
+            </book>
+            <book id="5">
+                <title>Fahrenheit 451</title>
+                <author>Ray Bradbury</author>
+                <publisher>Ballantine Books</publisher>
+                <price currency="USD">12.99</price>
+                <publication_date>1953-10-19</publication_date>
+                <genre>Dystopian</genre>
+                <pages>256</pages>
+                <language>English</language>
+                <rating>4.6</rating>
+            </book>
+        </books>
+    </library>
+</catalog>
