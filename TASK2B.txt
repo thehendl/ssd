@@ -1,0 +1,35 @@
+
+MATCH (n) DETACH DELETE n;
+
+
+CREATE (root:cinemas {name: "cinemasRoot"}),
+
+
+(post1:PostalCode {pilCode: 10101, code: 1010}),
+(post5:PostalCode {code: 1050, pilCode: 10505}),
+
+
+(cin1:Cinema {name: "burgkino", location: "innere stadt"}),
+(cin2:Cinema {name: "filmmcasino", location: "margarethen"}),
+
+
+(mov1:Movie {title: "the third man", year: 1949, origin: "GB"}),
+(mov2:Movie {title: "favoriten", year: 2024, origin: "AT"}),
+(mov3:Movie {title: "der junge & der reihhhhher", year: 2024, origin: "JAP"}),
+
+
+
+(root)-[:HAS_CINEMA]->(cin1),
+(root)-[:HAS_CINEMA]->(cin2),
+
+
+
+(cin1)-[:HAS_POSTALCODE]->(post1),
+(cin2)-[:HAS_POSTALCODE]->(post5),
+
+(cin1)-[:PLAYS_MOVIE {FSK: "0"}]->(mov1),
+(cin1)-[:PLAYS_MOVIE {FSK: "16"}]->(mov2),
+(cin2)-[:PLAYS_MOVIE {FSK: "0"}]->(mov1),
+(cin2)-[:PLAYS_MOVIE {FSK: "0"}]->(mov3)
+
+MATCH (n) RETURN n;
