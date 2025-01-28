@@ -1,0 +1,83 @@
+Query1:
+
+MATCH (c:Cinema)
+RETURN c.name AS CinemaName, c.location AS Location;
+
+returns all cinemas with locations
+
+╒═════════════╤══════════════╕
+│CinemaName   │Location      │
+╞═════════════╪══════════════╡
+│"burgkino"   │"innere stadt"│
+├─────────────┼──────────────┤
+│"filmmcasino"│"margarethen" │
+└─────────────┴──────────────┘
+
+
+Query2:
+
+MATCH (c:Cinema)-[:PLAYS_MOVIE]->(m:Movie)
+RETURN c.name AS cinemaName, COUNT(m) AS movieCount;
+
+counts number of movies per cinema and returns the number with the cinemaname
+
+╒═════════════╤══════════╕
+│cinemaName   │movieCount│
+╞═════════════╪══════════╡
+│"burgkino"   │2         │
+├─────────────┼──────────┤
+│"filmmcasino"│2         │
+└─────────────┴──────────┘
+
+
+Query3:
+
+MATCH (m:Movie)
+WHERE m.year > 2000
+RETURN m.title AS movieTitle, m.year AS releaseYear, m.origin AS origin;
+
+returns all movies which are released after 2000 with title and origin
+
+╒════════════════════════════╤═══════════╤══════╕
+│movieTitle                  │releaseYear│origin│
+╞════════════════════════════╪═══════════╪══════╡
+│"favoriten"                 │2024       │"AT"  │
+├────────────────────────────┼───────────┼──────┤
+│"der junge & der reihhhhher"│2024       │"JAP" │
+└────────────────────────────┴───────────┴──────┘
+
+
+Query4:
+
+MATCH (m:Movie)<-[:PLAYS_MOVIE]-(c:Cinema)
+RETURN m.title AS movieTitle, COLLECT(c.name) AS playedAt;
+
+returns all movies with the cinemas they are played at
+
+╒════════════════════════════╤═══════════════════════════╕
+│movieTitle                  │playedAt        │
+╞════════════════════════════╪═══════════════════════════╡
+│"the third man"             │["burgkino", "filmmcasino"]│
+├────────────────────────────┼───────────────────────────┤
+│"favoriten"                 │["burgkino"]               │
+├────────────────────────────┼───────────────────────────┤
+│"der junge & der reihhhhher"│["filmmcasino"]            │
+└────────────────────────────┴───────────────────────────┘
+
+
+Query5:
+
+MATCH (m:Movie)<-[:PLAYS_MOVIE]-(c:Cinema)
+RETURN c.name AS cinemaName, m.title AS novieTitle, m.year AS releaseYear
+ORDER BY m.year ASC
+LIMIT 1;
+
+returns the oldest movie played with name, title and release
+
+╒══════════╤═══════════════╤═══════════╕
+│cinemaName│movieTitle     │releaseYear│
+╞══════════╪═══════════════╪═══════════╡
+│"burgkino"│"the third man"│1949       │
+└──────────┴───────────────┴───────────┘
+
+
